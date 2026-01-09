@@ -171,9 +171,3 @@ Ejemplo de `appsettings.json`:
 * La primera fase no persiste datos, todas las consultas van al proveedor HTTP simulado.
 * El diseño está preparado para **extenderse fácilmente**: persistencia en DB, cache, logging, manejo de errores.
 * El score generado es determinístico, pero simulado; en un entorno real, se reemplazaría por un proveedor de crédito real.
-
----
-
-Si quieres, puedo armar también **una versión lista para GitHub** con **secciones de instalación, configuración de API Key, pruebas unitarias y ejemplos de CQRS**, que quede profesional y lista para entregar o presentar.
-
-¿Quieres que haga eso?
