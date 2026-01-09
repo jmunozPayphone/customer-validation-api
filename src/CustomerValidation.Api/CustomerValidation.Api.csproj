@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerValidation.ApplicationCore\CustomerValidation.ApplicationCore.csproj" />
+    <ProjectReference Include="..\CustomerValidation.Infrastructure\CustomerValidation.Infrastructure.csproj" />
+    <ProjectReference Include="..\CustomerValidation.SharedKernel\CustomerValidation.SharedKernel.csproj" />
+  </ItemGroup>
+
 </Project>
