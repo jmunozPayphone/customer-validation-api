@@ -105,6 +105,26 @@ Content-Type: application/json
 
 ---
 
+### Por qué priorizamos la **consulta directa al proveedor** en la primera fase
+
+1. **Objetivo inicial:**
+   La primera fase del proyecto está diseñada para **validar que la integración con el proveedor externo funciona** y que podemos obtener correctamente el score crediticio.
+
+2. **Evitar complejidad temprana:**
+   Si implementamos persistencia y cache desde el inicio, complicamos el flujo de pruebas y desarrollo, porque tendríamos que simular DB, cache, expiraciones, etc. Al hacer la **consulta directa**, podemos enfocarnos en la lógica de negocio y reglas de riesgo primero.
+
+3. **Determinismo de datos:**
+   Consultar directamente nos asegura que siempre obtenemos los datos más recientes del proveedor, lo cual es importante para **probar las reglas de riesgo** con distintos valores de score.
+
+4. **Preparación para la fase 2:**
+   Una vez validada la integración, la **persistencia y cache** se agregan para optimizar el rendimiento y evitar múltiples llamadas al API externo. 
+
+---
+
+En pocas palabras: **primero garantizamos la funcionalidad y la exactitud de la consulta**, y luego optimizamos con persistencia y cache.
+
+---
+
 ## Consideraciones adicionales
 
 * La primera fase no persiste datos, todas las consultas van al proveedor HTTP simulado.
