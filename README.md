@@ -75,13 +75,13 @@ Infrastructure
 **Request:**
 
 ```http
-POST /api/customers/assess-risk
+POST /api/customers/risk-assessment
 Content-Type: application/json
 
 {
-    "name": "George Bluth",
-    "document": "0102030405",
-    "txAmount": 800.00
+    "name": "Jesus David",
+    "documentNumber": "0986589647",
+    "transactionAmount": 1500
 }
 ```
 
