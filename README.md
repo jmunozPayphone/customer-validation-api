@@ -125,6 +125,47 @@ En pocas palabras: **primero garantizamos la funcionalidad y la exactitud de la 
 
 ---
 
+## Configuración de la aplicación (`appsettings.json`)
+
+La aplicación requiere ciertos settings clave para funcionar correctamente, especialmente la integración con el proveedor de **Credit Score**.
+
+Ejemplo de `appsettings.json`:
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "CreditScoreProvider": {
+    "BaseAddress": "https://reqres.in",
+    "ApiKey": ""
+  }
+}
+```
+
+### Importancia de los settings
+
+* **Logging:**
+  Define el nivel de detalle de los logs. Por defecto, se registran **información general** y advertencias de ASP.NET Core. Es útil para depuración y monitoreo.
+
+* **CreditScoreProvider.BaseAddress:**
+  URL base del proveedor externo de score crediticio. Es fundamental que esté correcta para que las consultas HTTP funcionen.
+
+* **CreditScoreProvider.ApiKey:**
+  Este valor es **clave para la autenticación** con el proveedor externo.
+
+  * Debe ser **asignado correctamente** antes de ejecutar la aplicación.
+  * Sin el ApiKey, las llamadas al API externo fallarán con `Unauthorized`.
+  * Se recomienda mantener el ApiKey en **variables de entorno** o en un **secret manager** en entornos de producción, en lugar de dejarlo directamente en `appsettings.json`.
+
+> ⚠️ **Nota:** No se podrá obtener el score crediticio ni validar el riesgo si el `ApiKey` está vacío o incorrecto.
+
+---
+
 ## Consideraciones adicionales
 
 * La primera fase no persiste datos, todas las consultas van al proveedor HTTP simulado.
