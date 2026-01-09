@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerValidation.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerValidation.SharedKernel", "src\CustomerValidation.SharedKernel\CustomerValidation.SharedKernel.csproj", "{E3CB316A-0E83-45B7-BB2E-3C65B9F29A95}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{55816AD4-D7C0-46CB-BCBB-0AB6FDBDFE3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerValidation.ApplicationCore.UnitTests", "tests\CustomerValidation.ApplicationCore.UnitTests\CustomerValidation.ApplicationCore.UnitTests.csproj", "{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{E3CB316A-0E83-45B7-BB2E-3C65B9F29A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3CB316A-0E83-45B7-BB2E-3C65B9F29A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3CB316A-0E83-45B7-BB2E-3C65B9F29A95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{1BE763D3-D828-4B3C-AD52-2B37EC13A5EB} = {9B399AEE-037B-4F92-9E45-13E9AB5A9D02}
 		{E485B1AB-CB5D-4DC0-900F-CDEB0B77CB97} = {9B399AEE-037B-4F92-9E45-13E9AB5A9D02}
 		{E3CB316A-0E83-45B7-BB2E-3C65B9F29A95} = {9B399AEE-037B-4F92-9E45-13E9AB5A9D02}
+		{D3783CF3-A62C-4A8E-907B-C6D7D8FC5167} = {55816AD4-D7C0-46CB-BCBB-0AB6FDBDFE3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9CBCD37-742E-44BB-AC1F-8DF0149E3D7D}

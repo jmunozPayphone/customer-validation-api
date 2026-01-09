@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CustomerValidation.ApplicationCore.Features.Customers.Commands;
 
-internal sealed class AssessCustomerRiskCommandHandler : IRequestHandler<AssessCustomerRiskCommand, Result<AssessCustomerRiskResponse>>
+public class AssessCustomerRiskCommandHandler : IRequestHandler<AssessCustomerRiskCommand, Result<AssessCustomerRiskResponse>>
 {
     private readonly IMediator _mediator;
     private readonly ILogger<AssessCustomerRiskCommandHandler> _logger;
